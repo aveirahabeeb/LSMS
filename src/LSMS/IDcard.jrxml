@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="490" pageHeight="500" orientation="Landscape" columnWidth="450" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9e0aed8a-5cab-4eaa-b003-e1009052c91e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="realPath" class="java.lang.String"/>
+	<parameter name="StdImage" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select FirstName,LastName,Course,MatricNo,Image from tblstudents]]>
+	</queryString>
+	<field name="FirstName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LastName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Course" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="MatricNo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Image" class="java.io.InputStream">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="90" splitType="Prevent">
+			<staticText>
+				<reportElement x="100" y="26" width="301" height="33" forecolor="#00CCCC" uuid="2f03e551-d088-41fe-ac56-c6b75a63fc7e"/>
+				<textElement textAlignment="Justified">
+					<font size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FOUNTAIN UNIVERSITY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="122" y="77" width="250" height="13" forecolor="#00CCCC" uuid="014c6c8c-0ddb-4d7b-9878-0251dc71b525"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[P.M.B 4491 Osogbo,Oke-Osun Osogbo, Osun State]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="60" width="301" height="17" forecolor="#00CCCC" uuid="a2c690c3-9f2c-417f-a3b2-67c3f5cc48aa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[UNIVERSITY OF THE NASRUL-LAHI-I-FATIH SOCIETY OF NIGERIA]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="185" splitType="Stretch">
+			<textField>
+				<reportElement x="123" y="18" width="133" height="20" uuid="fd9f19af-009e-4cfe-a512-9f5e47c3df06"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{FirstName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="123" y="49" width="133" height="20" uuid="185337ad-1c62-49c5-9586-302983599ae0"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{LastName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="123" y="80" width="133" height="20" uuid="975b11a2-9f89-4baf-afb2-1d97c70111fa"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{MatricNo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="93" y="0" width="29" height="100" forecolor="#009999" uuid="cc8880a3-e843-4a53-a6bc-e0ae195831f6"/>
+				<textElement textAlignment="Center" rotation="Left">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[STUDENT]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="93" y="100" width="308" height="20" forecolor="#FFFFFF" backcolor="#006666" uuid="722ff3be-64ee-42c2-b290-915bc85e4b86"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="93" y="100" width="46" height="18" forecolor="#FFFFFF" uuid="9a9f1495-1bdc-48bc-ba85-bc5ad37def4f"/>
+				<textElement>
+					<font fontName="Calibri" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CONAS]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="256" y="102" width="120" height="18" forecolor="#FFFFFF" uuid="0bdb7516-80c8-4389-9f4c-7e7f04a311a1"/>
+				<textElement>
+					<font fontName="Calibri" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{Course}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="93" y="120" width="308" height="20" forecolor="#FFFFFF" backcolor="#009999" uuid="ea76258e-ab33-4f68-9003-05699873369d"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="93" y="120" width="99" height="18" forecolor="#FFFFFF" uuid="f575733c-1b15-47bd-96d6-1bb91b762a53"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Calibri" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2015/2016 SESSION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="256" y="120" width="145" height="18" forecolor="#FFFFFF" uuid="10b926ca-fcb7-4915-b601-41edd89682ee"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FAITH, KNOWLEDGE & SERVICE]]></text>
+			</staticText>
+			<image>
+				<reportElement x="312" y="0" width="119" height="100" uuid="a6ad24a9-2df8-4a59-943b-981c4ef1e025"/>
+				<imageExpression><![CDATA[$F{Image}]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="16" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
